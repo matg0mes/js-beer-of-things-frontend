@@ -44,8 +44,8 @@ code {
 }
 
 .button-add {
-  height: 4.5em;
-  width: 4.5em;
+  height: 4.4em;
+  width: 4.4em;
   text-align: center;
   border-radius: 50% !important;
   font-size: 25px !important;
@@ -64,4 +64,16 @@ code {
 
 .segment-own {
   color: #1b1c1d;
+}
+
+.pusher:nth-child(2) {
+  width: 85%;
+  padding: 15px 30px;
+}
+.ui.segment {
+  background-color: #252839 !important;
+}
+
+#root > div > div > div > div > div.pusher > div > div > div > div {
+  background-color: #1b1c1d !important;
 }

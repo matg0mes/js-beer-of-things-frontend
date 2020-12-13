@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
   return (
-    <Grid columns="equal" divided>
+    <Grid columns="equal">
       <Grid.Row>
         <Grid.Column>
           <Segment size="mini">{Charts(PieConfig)}</Segment>

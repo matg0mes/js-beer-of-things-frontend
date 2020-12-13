@@ -36,6 +36,13 @@ export const PieConfig = {
         },
       ],
     },
+    legend: {
+      display: true,
+      labels: {
+        fontColor: "#fff",
+        fontSize: 13,
+      },
+    },
   },
 };
 
@@ -77,6 +84,13 @@ export const DoughnutConfig = {
         },
       ],
     },
+    legend: {
+      display: true,
+      labels: {
+        fontColor: "#fff",
+        fontSize: 13,
+      },
+    },
   },
 };
 
@@ -99,6 +113,15 @@ export const PolarConfig = {
     ],
     labels: ["Red", "Green", "Yellow", "Grey", "Blue"],
   },
+  options: {
+    legend: {
+      display: true,
+      labels: {
+        fontColor: "#fff",
+        fontSize: 13,
+      },
+    },
+  },
 };
 
 export const RadarConfig = {
@@ -108,6 +131,7 @@ export const RadarConfig = {
     datasets: [
       {
         label: "Student A",
+
         backgroundColor: "rgba(200,0,0,0.2)",
         data: [65, 75, 70, 80, 60, 80],
       },
@@ -115,6 +139,7 @@ export const RadarConfig = {
         label: "Student B",
         backgroundColor: "rgba(0,0,200,0.2)",
         data: [54, 65, 60, 70, 70, 75],
+        color: "#fff",
       },
     ],
   },
@@ -128,10 +153,15 @@ export const RadarConfig = {
       },
       pointLabels: {
         fontSize: 18,
+        fontColor: "#fff",
       },
     },
     legend: {
       position: "left",
+      labels: {
+        fontColor: "#fff",
+        fontSize: 13,
+      },
     },
   },
 };
@@ -173,6 +203,13 @@ export const LineConfig = {
           },
         },
       ],
+    },
+    legend: {
+      display: true,
+      labels: {
+        fontColor: "#fff",
+        fontSize: 13,
+      },
     },
   },
 };
