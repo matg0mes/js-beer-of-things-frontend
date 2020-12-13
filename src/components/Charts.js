@@ -19,11 +19,7 @@ export default function Charts(
 
   return (
     <div>
-      <canvas
-        width={`${width}px`}
-        height={`${height}px`}
-        ref={chartContainer}
-      />
+      <canvas style={{ width, height }} ref={chartContainer} />
     </div>
   );
 }
