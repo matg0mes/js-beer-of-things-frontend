@@ -48,7 +48,10 @@ export default function MenuSidebar({ children }) {
             width="thin"
           >
             {factories.map((factory) => (
-              <Menu.Item as="a" active={activeFactory.id === factory.id}>
+              <Menu.Item
+                as="a"
+                active={activeFactory && activeFactory.id === factory.id}
+              >
                 <Image
                   onClick={() => setActiveFactory(factory)}
                   src="https://firebasestorage.googleapis.com/v0/b/beer-of-things-b8f92.appspot.com/o/general%2F867bb2ba36487ac42bf3e96325f359e4.png?alt=media&token=5b52bf9f-6ad5-441e-895e-0947ebfa14a1"
@@ -73,7 +76,11 @@ export default function MenuSidebar({ children }) {
           <Sidebar.Pusher>{children}</Sidebar.Pusher>
         </Sidebar.Pushable>
       </Grid.Column>
-      <CreateFactory open={openCreate} setOpen={setOpenCreate} />
+      <CreateFactory
+        open={openCreate}
+        setOpen={setOpenCreate}
+        setActiveFactory={setActiveFactory}
+      />
     </Grid>
   );
 }

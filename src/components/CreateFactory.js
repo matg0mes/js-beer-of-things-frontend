@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Button, Header, Icon, Modal, Form } from "semantic-ui-react";
 import { createFactory } from "../services/factory";
 
-export default function CreateFactory({ open, setOpen }) {
+export default function CreateFactory({ open, setOpen, setActiveFactory }) {
   const initialFactory = {
     regiao: "",
     nome: "",
@@ -11,17 +11,14 @@ export default function CreateFactory({ open, setOpen }) {
 
   const [newFactory, setNewFactory] = useState(initialFactory);
 
-  const validate = () => false;
-
   const handleInput = ({ target: { value, id } }) =>
     setNewFactory({ ...newFactory, [id]: value });
 
   const handleCreateFactory = async () => {
-    if (validate()) return;
-
-    await createFactory(newFactory);
+    const { data } = await createFactory(newFactory);
 
     setNewFactory(initialFactory);
+    setActiveFactory(data);
     setOpen(false);
   };
 

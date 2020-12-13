@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
   return (
-    <Container className={"main-container"}>
+    <Container className={"main-container"} fluid>
       <Grid>
         <Grid.Row stretched>
           <Grid.Column width={7}>{Charts(PieConfig)}</Grid.Column>
