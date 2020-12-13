@@ -5,22 +5,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 
-import {
-  Container,
-  Header,
-  Grid,
-  Image,
-  Menu,
-  Segment,
-} from "semantic-ui-react";
-import {} from "semantic-ui-react";
-
 // Semantic UI
-
+import { Container } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
-
-//Styles
-import "./";
 
 function App() {
   return (
