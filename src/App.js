@@ -5,7 +5,18 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 
+import {
+  Container,
+  Header,
+  Grid,
+  Image,
+  Menu,
+  Segment,
+} from "semantic-ui-react";
+import {} from "semantic-ui-react";
+
 // Semantic UI
+
 import "semantic-ui-css/semantic.min.css";
 
 //Styles
@@ -13,13 +24,16 @@ import "./";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Sidebar />
-        <Route exact path="/" component={Home} />
-        {/* <Route exact path="/home" component={ Home } /> */}
-      </Switch>
-    </BrowserRouter>
+    <Container fluid className={"main-container"}>
+      <Sidebar>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/devices" component={Home} />
+          </Switch>
+        </BrowserRouter>
+      </Sidebar>
+    </Container>
   );
 }
 

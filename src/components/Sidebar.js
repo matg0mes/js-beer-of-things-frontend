@@ -1,61 +1,52 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect } from "react";
 
 //Context
-import MyContext from '../context/MyContext';
+import MyContext from "../context/MyContext";
 
 import {
   Grid,
-  Header,
-  Icon,
   Image,
   Menu,
   Segment,
   Sidebar,
-} from 'semantic-ui-react';
+  SidebarPushable,
+} from "semantic-ui-react";
 
-export default function MenuSidebar() {
+export default function MenuSidebar({ children }) {
   const { visible, setVisible } = useContext(MyContext);
 
+  console.log(children);
   useEffect(() => {
-    setTimeout( () => setVisible(true), 3000);
-  },[]);
+    setVisible(true);
+  }, []);
 
   return (
-      <Grid columns={1}>
-        <Grid.Column>
-          <Sidebar.Pushable as={Segment}>
-            <Sidebar
-              as={Menu}
-              animation='push'
-              icon='labeled'
-              inverted
-              onHide={() => setVisible(false)}
-              vertical
-              visible={visible}
-              width='thin'
-            >
-              <Menu.Item as='a'>
-                <Icon name='home' />
-                Home
-              </Menu.Item>
-              <Menu.Item as='a'>
-                <Icon name='gamepad' />
-                Games
-              </Menu.Item>
-              <Menu.Item as='a'>
-                <Icon name='camera' />
-                Channels
-              </Menu.Item>
-            </Sidebar>
+    <Grid columns={1}>
+      <Grid.Column>
+        <Sidebar.Pushable as={Segment}>
+          <Sidebar
+            as={Menu}
+            animation="push"
+            icon="labeled"
+            inverted
+            // onHide={() => setVisible(false)}
+            vertical
+            visible={visible}
+            width="thin"
+          >
+            <Menu.Item as="a">
+              <Image
+                src="https://firebasestorage.googleapis.com/v0/b/beer-of-things-b8f92.appspot.com/o/general%2F867bb2ba36487ac42bf3e96325f359e4.png?alt=media&token=5b52bf9f-6ad5-441e-895e-0947ebfa14a1"
+                size="small"
+                circular
+              />
+              Fabrica Guarulhos
+            </Menu.Item>
+          </Sidebar>
 
-            <Sidebar.Pusher>
-              <Segment basic>
-                <Header as='h3'>Application Content</Header>
-                <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
-              </Segment>
-            </Sidebar.Pusher>
-          </Sidebar.Pushable>
-        </Grid.Column>
-      </Grid>
-  )
+          <Sidebar.Pusher>{children}</Sidebar.Pusher>
+        </Sidebar.Pushable>
+      </Grid.Column>
+    </Grid>
+  );
 }

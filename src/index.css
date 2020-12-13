@@ -14,5 +14,10 @@ code {
 }
 
 .main-container {
-  height: 100%;
+  height: 95vh;
+}
+
+.sidebar-own {
+  padding: 0% !important;
+  margin: 0% !important;
 }

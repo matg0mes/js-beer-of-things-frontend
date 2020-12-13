@@ -1,13 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import Sidebar from './Sidebar';
+import Sidebar from "./Sidebar";
 
-import { Container } from 'semantic-ui-react'
+import {
+  Container,
+  Header,
+  Grid,
+  Image,
+  Menu,
+  Segment,
+} from "semantic-ui-react";
+import {} from "semantic-ui-react";
 
 export default function Home() {
-  return(
-    <Container>
-      <Sidebar />
+  return (
+    <Container fluid className={"child-container"}>
+      Hello World
     </Container>
-  )
+  );
 }
