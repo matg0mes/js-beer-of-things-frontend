@@ -15,6 +15,7 @@ code {
 
 .main-container {
   height: 95vh;
+  overflow: auto;
 }
 
 .sidebar-own {
