@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Container } from "semantic-ui-react";
+import {} from "semantic-ui-react";
 
-export default function Home() {
+export default function Sectors() {
   return <Container fluid className={"main-container"}></Container>;
 }

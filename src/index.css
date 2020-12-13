@@ -6,6 +6,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+  background-color: #252839 !important;
+}
+
+.inputter::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #c6c6c6 !important;
+  opacity: 1; /* Firefox */
+}
+
+.inputter::placeholder:hover {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000 !important;
+  opacity: 1; /* Firefox */
 }
 
 code {
@@ -15,9 +28,34 @@ code {
 
 .main-container {
   height: 95vh;
+  background-color: #252839 !important;
 }
 
 .sidebar-own {
   padding: 0% !important;
   margin: 0% !important;
+  border-color: #1b1c1d !important;
+}
+
+.platform {
+  border-color: #1b1c1d !important;
+}
+
+.button-add {
+  height: 4.5em;
+  width: 4.5em;
+  text-align: center;
+  border-radius: 50% !important;
+  font-size: 25px !important;
+  background-color: #495285 !important;
+  color: #f2f2f2 !important;
+}
+
+.button-add-space {
+  display: flex !important;
+  align-items: center;
+}
+
+.label-own {
+  color: #f2f2f2 !important;
 }

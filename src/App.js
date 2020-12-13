@@ -24,7 +24,7 @@ import "./";
 
 function App() {
   return (
-    <Container fluid className={"main-container"}>
+    <Container fluid className={"platform"}>
       <Sidebar>
         <BrowserRouter>
           <Switch>
