@@ -28,7 +28,7 @@ code {
 
 .main-container {
   height: 95vh;
-  background-color: #252839 !important;
+  background-color: #252839;
   overflow: auto;
 }
 
