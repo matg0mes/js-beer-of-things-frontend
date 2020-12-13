@@ -29,7 +29,8 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/devices" component={Home} />
+            <Route exact path="/:factor/sectors" component={Home} />
+            <Route exact path="/sector/:sector/devices" component={Home} />
           </Switch>
         </BrowserRouter>
       </Sidebar>
