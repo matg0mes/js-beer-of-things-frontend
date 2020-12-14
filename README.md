@@ -1,7 +1,8 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#screenshots">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#memo-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#live-demo">Live demo</a>
 </p>
 
 <p align="center">
@@ -40,6 +41,9 @@ Click to expand.<br>
 <div>
 <img src="https://i.imgur.com/Qr00vI2.png" width="20%" height="20%" />
 </div>
+
+# Live demo
+https://beer-of-things-frontend.herokuapp.com/
 
 # Instalando
 
