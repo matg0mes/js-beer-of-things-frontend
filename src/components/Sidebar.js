@@ -4,31 +4,44 @@ import React, { useContext, useEffect, useState } from "react";
 import MyContext from "../context/MyContext";
 
 import CreateFactory from "./CreateFactory";
+import history from "../services/history";
 import { Grid, Image, Menu, Segment, Sidebar, Button } from "semantic-ui-react";
 import { getFactories } from "../services/factory";
 
 export default function MenuSidebar({ children }) {
+  const { visible, setVisible } = useContext(MyContext);
   const [openCreate, setOpenCreate] = useState(false);
   const [factories, setFactories] = useState([]);
-  const { visible, setVisible } = useContext(MyContext);
   const [activeFactory, setActiveFactory] = useState({});
+
+  const handleNavigation = (factory) => {
+    history.push(`/${factory.id}/sectors`);
+  };
 
   const handleFactories = async () => {
     const { data } = await getFactories();
     setFactories(data);
-    console.log(data);
   };
 
   const handleInitialize = () => {
     const [firstFactory] = factories;
-    setActiveFactory(firstFactory);
+    if (firstFactory) setActiveFactory(firstFactory);
+  };
+
+  const navigateInitial = () => {
+    if (window.location.pathname === "/" && activeFactory && activeFactory.id)
+      history.push(`/${activeFactory.id}/sectors`);
   };
 
   useEffect(() => {
     setVisible(true);
     handleFactories();
-    handleInitialize();
   }, []);
+
+  useEffect(() => {
+    handleInitialize();
+    navigateInitial();
+  }, [factories]);
 
   useEffect(() => {
     handleFactories();
@@ -51,6 +64,7 @@ export default function MenuSidebar({ children }) {
               <Menu.Item
                 as="a"
                 active={activeFactory && activeFactory.id === factory.id}
+                onClick={() => handleNavigation(factory)}
               >
                 <Image
                   onClick={() => setActiveFactory(factory)}
