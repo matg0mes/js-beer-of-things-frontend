@@ -25,7 +25,15 @@ export default function Home() {
         <Grid.Column>
           <Segment size="mini">{Charts(DoughnutConfig)}</Segment>
         </Grid.Column>
-        x
+      </Grid.Row>
+
+      <Grid.Row>
+        <Grid.Column>
+          <Segment size="mini">{Charts(PolarConfig)}</Segment>
+        </Grid.Column>
+        <Grid.Column>
+          <Segment size="mini">{Charts(RadarConfig)}</Segment>
+        </Grid.Column>
       </Grid.Row>
     </Grid>
   );
