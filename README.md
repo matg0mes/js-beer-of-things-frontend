@@ -13,8 +13,8 @@
 
 <br>
 
-<h1>
-  Beer of things
+<h1 align="center">
+  Beer of things <img src="https://i.imgur.com/gt8jgSp.png" width="20%" height="20%"/>
 </h1>
 <h3>
   Beer of things é uma aplicação que por meio de IoT reúne dados gerados de máquinas industriais. Por meio de sensores conectados
